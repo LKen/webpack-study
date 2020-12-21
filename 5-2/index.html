@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <%= htmlWebpackPlugin
+    .tags
+    .headTags
+    .filter((tag) => tag.tagName === 'meta')
+    .join('') 
+  %>
+</head>
+
+<body>
+  1232
+  <img src="/public/123.jpg" alt="" style="width: 200px;">
+  <%= require(`html-loader?{"attributes":{"list":[{"tag":"img","attribute":"data-src","type":"src"},{"tag":"img","attribute":"src","type":"src"}]}}!./body.html`)  %>
+  
+  <%= htmlWebpackPlugin
+    .tags
+    .headTags
+    .filter((tag) => tag.tagName !== 'meta')
+    .join('') 
+  %>
+  <%= htmlWebpackPlugin.tags.bodyTags %>
+
+  <div id="hot"></div>
+</body>
+
+</html>
+
+

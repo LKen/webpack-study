@@ -1,0 +1,1 @@
+import './foot.less'

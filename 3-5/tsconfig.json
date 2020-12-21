@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5",
+    "allowJs": true,
+    "typeRoots" : [
+      "./typings/modules",
+      "../node_modules/@types"
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "../node_modules",
+    "./dist"
+  ]
+}
